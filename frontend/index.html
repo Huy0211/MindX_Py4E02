@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMHT Player Statistics Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏆 LMHT Player Statistics Dashboard 2024</h1>
+            <p>Phân tích và so sánh chỉ số tuyển thủ chuyên nghiệp</p>
+        </header>
+
+        <div class="controls">
+            <div class="filter-section">
+                <label for="positionFilter">Lọc theo vị trí:</label>
+                <select id="positionFilter">
+                    <option value="all">Tất cả vị trí</option>
+                    <option value="Top">Top</option>
+                    <option value="Jungle">Jungle</option>
+                    <option value="Mid">Mid</option>
+                    <option value="Adc">ADC</option>
+                    <option value="Support">Support</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="charts-grid">
+            <!-- Biểu đồ 1: Top 5 Win Rate -->
+            <div class="chart-container">
+                <h3>Top 5 Tỉ lệ thắng cao nhất</h3>
+                <div id="winrateChart" class="chart"></div>
+            </div>
+
+            <!-- Biểu đồ 2: Top 5 KDA -->
+            <div class="chart-container">
+                <h3>Top 5 KDA cao nhất</h3>
+                <div id="kdaChart" class="chart"></div>
+            </div>
+
+            <!-- Biểu đồ 3: Top 5 Tỉ lệ tham gia giao tranh -->
+            <div class="chart-container">
+                <h3>Top 5 Tỉ lệ tham gia giao tranh (KP%)</h3>
+                <div id="kpChart" class="chart"></div>
+            </div>
+
+            <!-- Biểu đồ 4: Top 5 Sát thương mỗi phút -->
+            <div class="chart-container">
+                <h3>Top 5 Sát thương mỗi phút (DPM)</h3>
+                <div id="dpmChart" class="chart"></div>
+            </div>
+
+            <!-- Biểu đồ 5: Phân bố vị trí -->
+            <div class="chart-container">
+                <h3>Phân bố tuyển thủ theo vị trí</h3>
+                <div id="positionChart" class="chart"></div>
+            </div>
+
+            <!-- Biểu đồ 6: So sánh KDA theo vị trí -->
+            <div class="chart-container">
+                <h3>So sánh KDA trung bình theo vị trí</h3>
+                <div id="positionKDAChart" class="chart"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
